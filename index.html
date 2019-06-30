@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <button class="btn-keycontrol" title="Keycontrol Settings"></button>
+      <div class="keycontrol-settings-menu">
+        <span class="key">Pen - P</span>
+        <span class="key">Rainbow Pen - R</span>
+        <span class="key">Mirror Pen - M</span>
+        <span class="key">Eraser - E</span>
+        <span class="key">Paint bucket - B</span>
+        <span class="key">Color Picker - Y</span>
+        <span class="key">Rectangle - R</span>
+        <span class="key">Circle - C</span>
+        <span class="key">Stroke - S</span>
+        <span class="key">Paint all same pixels - F</span>
+        <span class="key">Lightless - L</span>
+        <span class="key">Keycontrol Settings - K</span>
+        <span class="key">Add frame - A</span>
+        <span class="key">Start/Stop animation - T</span>
+        <span class="key">Open/Close fullscreen - G</span>
+        <span class="key">Export as png - Q</span>
+        <span class="key">Export as gif - W</span>
+        <span class="key">Export as wdcp - D</span>
+      </div>
+    </header>
+    <main class="main">
+      <div class="tools-wrapper">
+        <div class="tools">
+          <button class="tools-btn btn-size" title="Chose Size">Size: 1</button>
+          <div class="tools tools-btn-size-menu">
+            <button class="tools-btn size-menu-btn" data-size="1">1x1</button>
+            <button class="tools-btn size-menu-btn" data-size="2">2x2</button>
+            <button class="tools-btn size-menu-btn" data-size="3">3x3</button>
+            <button class="tools-btn size-menu-btn" data-size="4">4x4</button>
+          </div>
+          <button class="tools-btn btn-pen" title="Pen"></button>
+          <button class="tools-btn btn-rainbow-pen" title="Rainbow Pen"></button>
+          <button class="tools-btn btn-mirror-pen" title="Mirror Pen"></button>
+          <button class="tools-btn btn-eraser" title="Eraser"></button>
+          <button class="tools-btn btn-bucket" title="Paint Bucket"></button>
+          <button class="tools-btn btn-eyedropper" title="Color Picker"></button>
+          <button class="tools-btn btn-rectangle" title="Rectangle"></button>
+          <button class="tools-btn btn-circle" title="Circle"></button>
+          <button class="tools-btn btn-stroke" title="Stroke"></button>
+          <button class="tools-btn btn-fill-same" title="Paint all same pixels"></button>
+          <button class="tools-btn btn-lightness" title="Lightness Left click - Lighten Right click - Darken"></button>
+          <div class="color-wrapper">
+            <div class="tools-btn primary-color-wrapper" title="Primary color">
+              <input type="color" class="tools-primary-color" value="#ff0000">
+            </div>
+            <div class="tools-btn secondary-color-wrapper" title="Secondary color">
+              <input type="color" class="tools-secondary-color" value="#0000ff">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="frames-wrapper">
+        <button class="frame-btn-add">Add new frame</button>
+        <div class="frames"></div>
+        <div class="frame-size-menu">
+          <span class="frame-size-menu-title">Choose pixels count on canvas:</span>
+          <button class="frame-size-btn" data-count="32">32x32</button>
+          <button class="frame-size-btn" data-count="64">64x64</button>
+          <button class="frame-size-btn" data-count="128">128x128</button>
+        </div>
+      </div>
+      <div class="canvas-wrapper">
+        <div class="canvas-container">
+          <canvas class="canvas canvas-main"></canvas>
+          <canvas class="canvas canvas-layer"></canvas>
+          <div class="position">none : none</div>
+        </div>
+      </div>
+      <div class="animation-player-wrapper">
+        <div class="animation-player">
+          <div class="animation-player-canvas-wrapper">
+            <canvas class="animation-player-canvas"></canvas>
+          </div>
+          <div class="animation-player-fps">
+            <input type="range" class="animation-player-fps-range" min="0" max="24">
+            <span class="animation-player-fps-text">FPS: 12</span>
+          </div>
+          <div class="animation-btns-wrapper">
+            <button class="animation-btn btn-start-animation"></button>
+            <button class=" animation-btn btn-fullscreen"></button>
+          </div>
+        </div>
+        <div class="export-tool-wrapper">
+          <span class="export-wrapper-text">Export / Import</span>
+          <div class="export-tool">
+            <button class="export-tool-btn export-tool-btn-png" title="Save current canvas as .png image">png</button>
+            <a href="" class="export-tool-link export-tool-png-link" download=""></a>
+            <button class="export-tool-btn export-tool-btn-gif" title="Save animation as .gif image">gif</button>
+            <a href="" class="export-tool-link export-tool-gif-link" download=""></a>
+            <button class="export-tool-btn export-tool-btn-wpcd" title="Save data as .wpcd file">wpcd</button>
+            <a href="" class="export-tool-link export-tool-wpcd-link" download=""></a>
+            <button class="export-tool-btn import-tool-btn-wpcd" title="Upload data from .wpcd file">upload</button>
+            <input type="file" class="export-tool-btn import-tool-wpcd">
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+<script type="text/javascript" src="app.bundle.js"></script></body>
+</html>
